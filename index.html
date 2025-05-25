@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cotizador de Servicios Web</title>
+		<link rel="stylesheet" href="./css/styles.css" />
+	</head>
+	<body>
+		<h1>Cotizador de Servicios Web</h1>
+		<p class="intro">
+			Selecciona los servicios que deseas incluir en tu proyecto, llena
+			tus datos y obtén un estimado inmediato. Todos los precios están en
+			pesos colombianos.
+		</p>
+		<div class="contenedor">
+			<div class="columna">
+				<h3>Selecciona los servicios</h3>
+				<div id="contenedor-servicios"></div>
+			</div>
+
+			<div class="columna opciones">
+				<h3>Opciones por servicio</h3>
+				<div id="contenedor-opciones"></div>
+			</div>
+			<div class="columna">
+				<h3>Tus datos</h3>
+				<form id="formulario-cotizacion" onsubmit="event.preventDefault(); enviarFormulario();">
+					<input
+						type="text"
+						id="nombre"
+						placeholder="Tu nombre completo"
+					/>
+					<input
+						type="email"
+						id="email"
+						placeholder="Correo electrónico"
+					/>
+					<input
+						type="text"
+						id="proyecto"
+						placeholder="Nombre del proyecto"
+					/>
+					<textarea
+						id="comentarios"
+						placeholder="Comentarios adicionales"
+					></textarea>
+					<button type="submit">Enviar Cotización</button>
+				</form>
+			</div>
+		</div>
+		<div class="fila-total">
+			<span>Total estimado:</span>
+			<span id="total-estimado">$0</span>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>
