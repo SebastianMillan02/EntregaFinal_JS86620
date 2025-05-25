@@ -13,13 +13,18 @@ body {
 h1 {
 	color: #fff;
 	text-align: center;
-	margin: 30px auto 0 auto;
+	margin: 25px auto 0 auto;
 }
 p.intro {
 	color: #ccc;
-	max-width: 800px;
+	max-width: 700px;
 	margin: 15px auto 50px auto;
 	text-align: center;
+}
+p.intro a {
+	color: #4c88f1;
+	font-weight: 600;
+	text-decoration: none;
 }
 .contenedor {
 	max-width: 1200px;
@@ -44,7 +49,6 @@ p.intro {
 .columna::-webkit-scrollbar {
 	width: 6px;
 }
-
 .columna::-webkit-scrollbar-thumb {
 	background-color: #393939;
 	border-radius: 4px;
