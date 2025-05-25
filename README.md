@@ -15,7 +15,7 @@ Con este cotizador vas a poder obtener un valor estimado de tu proyecto configur
 Luego de configurar los servicios que necesites, puedes enviar tu cotización a tu correo y el desarrollador también recibirá una copia para que sea él quien te contacte y hablen sobre tu proyecto y puedas mencionar detalles más específicos o configuraciones adicionales que necesites.
 
 
-## Visita el eCommerce
+## Visita el cotizador
 
 - GitHub Pages - https://sebastianmillan02.github.io/EntregaFinal_JS86620/
 
