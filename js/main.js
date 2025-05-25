@@ -4,49 +4,59 @@ const servicios = [
 		nombre: 'Desarrollo Web',
 		descripcion:
 			'Sitios responsivos y funcionales para todo tipo de negocio.',
-		precio: 2000000,
+		precio: 1000000,
 	},
 	{
 		id: 'uxui',
 		nombre: 'Diseño UX/UI',
 		descripcion: 'Interfaces centradas en la experiencia del usuario.',
-		precio: 1500000,
+		precio: 600000,
+	},
+	{
+		id: 'seo',
+		nombre: 'Estrategia SEO',
+		descripcion: 'Optimización para motores de búsqueda y visibilidad online.',
+		precio: 1750000,
 	},
 ];
 
 const opcionesPorServicio = {
 	web: [
-		{ label: 'Incluir blog', precio: 400000, type: 'checkbox' },
+		{ label: 'Idioma adicional', precio: 600000, type: 'checkbox' },
 		{
-			label: 'Optimización para móviles',
-			precio: 350000,
+			label: 'Optimización Reponsive',
+			precio: 500000,
 			type: 'checkbox',
 		},
 		{
-			label: 'Número de páginas',
+			label: 'Cantidad de páginas internas',
 			type: 'number',
 			precioPorUnidad: 80000,
 			placeholder: 'Ingrese cantidad',
 		},
 		{
-			label: 'Hosting anual',
+			label: 'Mantenimiento Web',
 			type: 'select',
 			options: {
 				'No incluido': 0,
-				Básico: 300000,
-				Avanzado: 500000,
+				Mensual: 350000,
+				Anual: 3600000,
 			},
 		},
 	],
 	uxui: [
-		{ label: 'Prototipo interactivo', precio: 300000, type: 'checkbox' },
-		{ label: 'Diseño accesible (WCAG)', precio: 200000, type: 'checkbox' },
+		{ label: 'Prototipo interactivo', precio: 500000, type: 'checkbox' },
+		{ label: 'Diseño accesible', precio: 200000, type: 'checkbox' },
+	],
+	seo: [
+		{ label: 'Creación de textos SEO', precio: 500000, type: 'checkbox' },
+		{ label: 'Consultoría SEO Avanzada', precio: 800000, type: 'checkbox' },
 	],
 };
 
-const contenedorServicios = document.getElementById('contenedor-servicios');
-const contenedorOpciones = document.getElementById('contenedor-opciones');
-const totalSpan = document.getElementById('total-estimado');
+const contenedorServicios = document.querySelector('#contenedor-servicios');
+const contenedorOpciones = document.querySelector('#contenedor-opciones');
+const totalSpan = document.querySelector('#total-estimado');
 let seleccionados = [];
 
 servicios.forEach((servicio) => {
@@ -175,10 +185,10 @@ function actualizarTotal() {
 }
 
 function enviarFormulario() {
-    const form = document.getElementById('formulario-cotizacion');
-	const nombre = document.getElementById('nombre').value.trim();
-	const email = document.getElementById('email').value.trim();
-	const proyecto = document.getElementById('proyecto').value.trim();
+    const form = document.querySelector('#formulario-cotizacion');
+	const nombre = document.querySelector('#nombre').value.trim();
+	const email = document.querySelector('#email').value.trim();
+	const proyecto = document.querySelector('#proyecto').value.trim();
 
 	if (!nombre || !email || !proyecto) {
 		Swal.fire({
